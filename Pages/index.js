@@ -28,11 +28,11 @@ let jwc_jc = "http://zhjw.scu.edu.cn/j_spring_security_check"
 
 let http_head = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1";
 
-let agent = new http.Agent({keepAlive : true});
+let agent = new http.Agent({keepAlive: true});
 
 (async () => {
-    let response = await fetch(jwc_entry_url,{
-        headers:{
+    let response = await fetch(jwc_entry_url, {
+        headers: {
             'User-Agent': http_head,
         },
         // agent: new httpProxyAgent("http://localhost:8888"),
@@ -66,7 +66,7 @@ let agent = new http.Agent({keepAlive : true});
 
     let outputFilename = 'test.jpg'
 
-    fs.writeFileSync(outputFilename,buffer,null)
+    fs.writeFileSync(outputFilename, buffer, null)
 
     let post_data = {
         "j_username": '',
